@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AlphaSpice | Adventure Website Development</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff5722;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .container {
+      padding: 2rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    table th, table td {
+      padding: 1rem;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #ff7043;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ffe0b2;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AlphaSpice</h1>
+    <p>Adventure Website Development Plan</p>
+  </header>
+
+  <section class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Component</th>
+          <th>Description</th>
+          <th>Cost (₹)</th>
+        </tr>
+      </thead>
+      <tbody id="service-table-body"></tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>Total Budget: ₹16,000 | Each Component: ₹1,000</p>
+  </footer>
+
+  <script>
+    const services = [
+      ["Requirement Analysis", "Understanding client needs and planning features."],
+      ["UI/UX Design", "Designing user interface and experience with tools like Figma/Adobe XD."],
+      ["Frontend Development", "Developing responsive frontend using HTML, CSS, JS."],
+      ["Backend Development", "Implementing backend using Node.js/Spring Boot with APIs."],
+      ["Database Setup", "MongoDB/PostgreSQL setup and schema design."],
+      ["Content Integration", "Adding adventure-specific text, images, and videos."],
+      ["SEO Optimization", "Optimizing pages for search engines with keywords and meta tags."],
+      ["Performance Optimization", "Improving website loading speed and responsiveness."],
+      ["Testing & QA", "Manual and automated testing of all components."],
+      ["Hosting & Deployment", "Deploying the website on a suitable hosting platform."],
+      ["Domain & SSL Setup", "Purchasing domain, configuring SSL certificate for HTTPS."],
+      ["Analytics Integration", "Integrating Google Analytics for tracking visitors."],
+      ["Admin Dashboard", "Building a CMS for managing adventure posts and updates."],
+      ["Contact & Lead Forms", "Creating forms for user inquiries and feedback."],
+      ["Maintenance (3 months)", "Bug fixes and minor updates post-deployment."],
+      ["Documentation & Handover", "Complete project documentation and client handover."]
+    ];
+
+    const tbody = document.getElementById("service-table-body");
+
+    services.forEach((service, index) => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${service[0]}</td>
+        <td>${service[1]}</td>
+        <td>₹1000</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  </script>
+</body>
+</html>
